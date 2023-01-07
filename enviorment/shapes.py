@@ -1,3 +1,4 @@
+#Normal shpaes of the pieces
 class Shape:
     
     S = [[

@@ -5,7 +5,7 @@ import copy
 
 
 weightsNum = len(util.heuristics)
-
+#Model for natSelect
 
 class Model():
     def __init__(self, weights):

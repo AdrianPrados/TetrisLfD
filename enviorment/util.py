@@ -40,4 +40,4 @@ def placeholder(state):
 
 
 clearedLinesIndex = 1
-heuristics = [totalHeight, placeholder, holes, evenness, maxHeight]
+heuristics = [totalHeight, placeholder, holes, evenness, maxHeight] # Charatceristics of the peices

@@ -3,6 +3,7 @@ mod_path = Path(__file__).parent
 import csv
 import time
 
+#Generates the data into CSV format
 start_time = str(time.time()).split(".")[0][-5:]
 filename = str(mod_path) + "/data/" + "data_" + start_time + ".csv" 
 

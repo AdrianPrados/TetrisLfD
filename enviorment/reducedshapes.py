@@ -1,3 +1,4 @@
+#To use easier shpaes
 class ReducedShape:
     
     I = [['1','1'],

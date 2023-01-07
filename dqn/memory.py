@@ -1,5 +1,5 @@
 import random
-
+# Class to use the memory 
 class Memory:
     
     def __init__(self, size=10_000):

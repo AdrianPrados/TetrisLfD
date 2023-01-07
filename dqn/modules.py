@@ -1,5 +1,5 @@
 import torch.nn as nn
-
+#Module of the NN
 class Resize(nn.Module):
     
     def __init__(self, *args): 

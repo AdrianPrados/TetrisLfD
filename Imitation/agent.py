@@ -5,7 +5,7 @@ from pathlib import Path
 mod_path = Path(__file__).parent
 weight_path = str(mod_path) + '/weights/weights'
 from dqn.modules import Resize, Print_shape
-
+#Agent of the imitation porcess using DQN
 class imitation_agent(nn.Module):
     def __init__(self, env):
         super(imitation_agent, self).__init__()

@@ -1,6 +1,6 @@
 """
-Tetris in Python for DQN
-Run this for manual testing of Tetris Enviorment
+Tetris in Python for DQN used for Learninf from Demonstrations
+Run this for manual testing of Tetris Enviorment (play normal Tetris)
 """
 
 from enviorment.tetris import Tetris

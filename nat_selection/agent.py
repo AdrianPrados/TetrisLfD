@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 from enviorment.tetris import Tetris
 from nat_selection.model import Model, weightsNum
-
+#Code for natural selection for generates sinthetical models
 
 class Agent():
     def __init__(self, cores=32, population=500, selectChance=0.1, mutateChance=0.05, games=5, moves=50, replacePercent=0.3):

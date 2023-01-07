@@ -16,11 +16,6 @@ import torchvision.transforms as T
 from dqn.memory import Memory
 from dqn.modules import Resize, Print_shape
 
-"""
-https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html
-https://jonathan-hui.medium.com/rl-dqn-deep-q-network-e207751f7ae4
-https://drive.google.com/file/d/0BxXI_RttTZAhVUhpbDhiSUFFNjg/view
-"""
 
 class DQN(nn.Module):
     
@@ -53,7 +48,7 @@ class DQN(nn.Module):
         """
         
         dense_shape = resize_to = 64 if env.config['reduced_grid'] else 192
-                
+                # The NN used
         self.q_net = nn.Sequential(
             nn.Conv2d(2, 32, 3),
             nn.LeakyReLU(.1),
@@ -69,7 +64,7 @@ class DQN(nn.Module):
         )
         
         self.cached_q_net = deepcopy(self.q_net)
-        self.optimizer = optim.Adam(self.q_net.parameters(), self.alpha)
+        self.optimizer = optim.Adam(self.q_net.parameters(), self.alpha) # We use as optimizer ADAM 
         self.loss = nn.MSELoss()
         self.loss_temp = 0
         self.loss_count = 0

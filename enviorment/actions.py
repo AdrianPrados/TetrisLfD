@@ -1,3 +1,4 @@
+#Actions that the agent can do
 class Action:
 
     WAIT   = 0 # no move, just one tile down
