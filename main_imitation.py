@@ -8,7 +8,7 @@ from Imitation.agent import *
 from nat_selection.agent import Agent as NatAgent
 from nat_selection.model import Model
 
-env = Tetris({'reduced_shapes': 1}, 'Imitation')
+env = Tetris({'reduced_shapes': 0}, 'Imitation') #reduced_shpaes = 0(piezas normales)
 model = imitation_agent(env)
 
 learning_rate = 0.1
@@ -37,13 +37,13 @@ def train():
         for batch in range(len(x_train_batches)):
             model.loss(x_train_batches[batch], y_train_batches[batch]).backward() 
             optimizer.step()  # Perform optimization by adjusting W and b,
-            optimizer.zero_grad()  # Clear gradients for next step
+            optimizer.zero_grad()  # Limpiamos el gradiente apra el siguiente paso
  
 
     print("accuracy = %s" % model.accuracy(x_test, y_test))
 
 
-def main(manual=0):
+def main(manual=0): # Manual=1(toma de datos usuario)
 
     if manual:
         while 1:
@@ -100,8 +100,8 @@ def generate_data(moves):
 
 
 if __name__ == "__main__":
-    #train()
-    #model.save_weights()
-    model.load_weights('_10k_01_nat1')
-    main()
-    #generate_data(400)
+    #train() # Permite entrena el modelo y validarlo
+    #model.save_weights() # Guarda los pesos del modelo aprendido
+    model.load_weights('_10k_01_nat1') # Varga los pesos del modelo aprendido
+    main() # Permite mostrar un modelo cargado o tomar datos por el usuario
+    #generate_data(400) #Genera datos mediante un algortimo genético indicando los moviminetos.
